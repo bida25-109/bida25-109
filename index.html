@@ -22,7 +22,10 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="index.html">My Website</a>
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="images/logo.png" alt="Dynamic Pulse Sportswear Logo" class="logo">
+                    <span>Dynamic Pulse Sportswear</span>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -52,31 +55,61 @@
             <button id="theme-toggle"> Dark Mode</button>  
         </nav>
     </header>
-
-
  
+    <main>
+        <div class="page-gap"></div>
 
-<main class="container my-5">
-    <div class="row">
-        <div class="col-md-8">            
-        <p>Banner image with text.</p>        
-        <img src="https://placebanner.com/200/300" alt="A banner image">
-        </div>
-        <div class="col-md-4">
-         <p>View by Category:</p> 
-        <img src="https://placekitten.com/200/300" alt="A cute kitten">
-        <p>Exclusive Offers</p>
-        <img src="https://placepoffer.com/200/300" alt="An offers image">
-        <header> 
-        <h2>About Us</h2>  
-        </header> 
-        <p>About the pulse sportswear</p>      
-        </div>
-    </div>
-</main>
+        <section class="hero">
+            <div class="hero-content">
+                <p>Banner Image</p>
+                <h2>Performance. Style. You.</h2>
+                <p>Quality sportswear for every move you make.</p>
+            </div>
+        </section>
 
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">View By category</h2>
+                <div class="grid-3">
+                    <article class="category-card">
+                        <div class="image-placeholder" role="img" aria-label="Men category image placeholder"></div>
+                        <h3>Men</h3>
+                        <a class="btn" href="men.html">View</a>
+                    </article>
 
- 
+                    <article class="category-card">
+                        <div class="image-placeholder" role="img" aria-label="Women category image placeholder"></div>
+                        <h3>Women</h3>
+                        <a class="btn" href="women.html">View</a>
+                    </article>
+
+                    <article class="category-card">
+                        <div class="image-placeholder" role="img" aria-label="Sale category image placeholder"></div>
+                        <h3>Sale</h3>
+                        <a class="btn" href="sale.html">View</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Exclusive Offers</h2>
+                <div class="offer-banner">
+                    <h3>Special discounts on selected products</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container about-preview">
+                <h2 class="section-title center-title">About us</h2>
+                <p>Brand Name provides quality sportswear designed for comfort, movement and everyday confidence.</p>
+                <p>Our catalog helps customers browse products before contacting us for more information.</p>
+                <a class="btn" href="about.html">Learn More</a>
+            </div>
+        </section>
+    </main>
 
     <footer> 
 
