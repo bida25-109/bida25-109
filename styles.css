@@ -1,394 +1,190 @@
 /* UrbanFit Catalog Website
    W3C-friendly HTML5/CSS3 responsive layout
 */
-
-* {
-    box-sizing: border-box;
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    color: #111;
-    background-color: #f3f3f3;
+    transition: background-color 0.3s, color 0.3s;  /* ADD THIS LINE */
 }
 
-img,
-video {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.container {
-    width: min(1200px, 94%);
-    margin: 0 auto;
-}
-
-/* Header */
-.site-header {
-    background-color: #fff;
-    border-bottom: 2px solid #111;
-}
-
-.brand-row {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    padding: 22px 0;
-}
-
-.logo-box {
-    width: 86px;
-    text-align: center;
-    font-size: 0.9rem;
-}
-
-.logo-circle {
-    width: 64px;
-    height: 64px;
-    border: 2px solid #111;
-    border-radius: 50%;
-    margin: 0 auto 5px;
-    position: relative;
-}
-
-.logo-circle::before,
-.logo-circle::after {
-    content: "";
-    position: absolute;
-    top: 30px;
-    left: 7px;
-    width: 48px;
-    height: 2px;
-    background-color: #111;
-}
-
-.logo-circle::before {
-    transform: rotate(45deg);
-}
-
-.logo-circle::after {
-    transform: rotate(-45deg);
-}
-
-.brand-name {
-    font-size: clamp(1.6rem, 4vw, 2.1rem);
-    font-weight: 500;
-}
-
-/* Navigation */
-.main-nav {
-    background-color: #fff;
-    border-bottom: 2px solid #111;
-}
-
-.nav-inner {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 22px;
-    padding: 16px 0;
-}
-
-.main-nav a {
-    font-size: 1.05rem;
-    padding-bottom: 4px;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-    border-bottom: 3px solid #111;
-}
-
-/* Banner */
-.page-gap {
-    height: 44px;
-    background-color: #fff;
-    border-bottom: 2px solid #111;
-}
-
-.hero,
-.page-banner {
-    min-height: 170px;
-    border-bottom: 2px solid #111;
-    background:
-        linear-gradient(to bottom right, transparent 49.4%, #111 49.8%, #111 50.2%, transparent 50.6%),
-        linear-gradient(to top right, transparent 49.4%, #111 49.8%, #111 50.2%, transparent 50.6%),
-        #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.hero-content,
-.banner-content {
-    background-color: rgba(255, 255, 255, 0.88);
-    padding: 10px 24px;
-}
-
-.hero h2,
-.page-banner h2 {
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    font-weight: 500;
-}
-
-.hero p,
-.page-banner p {
-    margin-top: 4px;
-}
-
-/* Main sections */
 main {
-    background-color: #fff;
-}
-
-.section {
-    padding: 42px 0;
-}
-
-.section-title {
-    font-size: clamp(1.4rem, 3vw, 1.8rem);
-    margin-bottom: 22px;
-    font-weight: 500;
-}
-
-.center-title {
-    text-align: center;
-}
-
-.category-tabs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 28px;
-    margin-bottom: 34px;
-    font-size: 1.1rem;
-}
-
-.category-tabs button {
-    border: none;
-    background: none;
-    font-size: 1.1rem;
-    cursor: pointer;
-    padding: 7px 0;
-}
-
-.category-tabs button:hover,
-.category-tabs button.active {
-    border-bottom: 3px solid #111;
-}
-
-.grid-3,
-.product-grid,
-.contact-grid {
-    display: grid;
-    gap: 32px;
-}
-
-.grid-3 {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.product-grid {
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.contact-grid {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-/* Cards */
-.category-card,
-.product-card,
-.info-card,
-.contact-card {
-    text-align: center;
-}
-
-.image-placeholder {
-    min-height: 110px;
-    border: 2px solid #111;
-    background:
-        linear-gradient(to bottom right, transparent 49%, #111 49.5%, #111 50.5%, transparent 51%),
-        linear-gradient(to top right, transparent 49%, #111 49.5%, #111 50.5%, transparent 51%),
-        #fff;
-    margin-bottom: 16px;
-}
-
-.category-card .image-placeholder {
-    min-height: 160px;
-}
-
-.large-placeholder {
-    min-height: 170px;
-}
-
-.product-card h3,
-.category-card h3 {
-    font-size: 1.05rem;
-    margin-bottom: 8px;
-    font-weight: 500;
-}
-
-.product-card p,
-.category-card p {
-    margin: 8px auto;
-    width: 78%;
-    border-bottom: 2px solid #111;
-    padding-bottom: 3px;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 12px;
-    padding: 9px 18px;
-    border: 2px solid #111;
-    background-color: #fff;
-    cursor: pointer;
-    font-size: 0.95rem;
-}
-
-.btn:hover {
-    background-color: #111;
-    color: #fff;
-}
-
-.offer-banner {
-    min-height: 170px;
-    border: 2px solid #111;
-    background:
-        linear-gradient(to bottom right, transparent 49.4%, #111 49.8%, #111 50.2%, transparent 50.6%),
-        linear-gradient(to top right, transparent 49.4%, #111 49.8%, #111 50.2%, transparent 50.6%),
-        #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.about-preview {
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.about-preview p,
-.about-text p,
-.info-card p {
-    border-bottom: 2px solid #111;
-    padding: 8px 0;
-    margin-top: 10px;
-}
-
-/* About */
-.about-layout {
-    display: grid;
-    grid-template-columns: 1fr 1.8fr;
-    gap: 36px;
-    align-items: center;
-    margin-bottom: 42px;
-}
-
-.about-block {
-    text-align: center;
-    margin: 34px auto;
-    max-width: 1000px;
-}
-
-/* Sale */
-.sale-price {
-    color: #b00000;
-    font-weight: bold;
-}
-
-.old-price {
-    text-decoration: line-through;
-    color: #555;
-}
-
-/* Contact / Feedback */
-.feedback-wrap {
-    display: grid;
-    grid-template-columns: minmax(280px, 430px);
-    justify-content: center;
-    margin-bottom: 38px;
-}
-
-.feedback-form {
-    border: 2px solid #111;
-    padding: 22px;
-    border-radius: 6px;
-}
-
-.feedback-form h2 {
-    text-align: center;
-    margin-bottom: 15px;
-    font-weight: 500;
-}
-
-.feedback-form label {
-    display: block;
-    margin-top: 12px;
-    margin-bottom: 5px;
-}
-
-.feedback-form input,
-.feedback-form select,
-.feedback-form textarea {
     width: 100%;
-    padding: 11px;
-    border: 2px solid #111;
-    border-radius: 5px;
-    font-size: 1rem;
+    padding: 45px 0;
 }
 
-.feedback-form textarea {
-    resize: vertical;
-    min-height: 110px;
-}
 
-.form-actions {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 16px;
-}
-
-.form-message {
-    margin-top: 12px;
+/* Top banner and offers banner */
+.home-banner,
+.offers-banner {
+    min-height: 250px;
+    position: relative;
+    border: 2px solid #333;
     text-align: center;
-    font-weight: bold;
+    overflow: hidden;
 }
 
-.contact-card {
-    border: 2px solid #111;
-    min-height: 190px;
-    padding: 25px;
+.home-banner img,
+.offers-banner img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
 
-.contact-icon {
-    font-size: 3rem;
-    margin-top: 20px;
+.home-banner div,
+.offers-banner div {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* View by category */
+.category-section {
+    padding: 35px 40px;
+}
+
+.category-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.category-card {
+    width: 30%;
+    text-align: center;
+}
+
+.category-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border: 2px solid #333;
+}
+
+/* About us */
+.about-section {
+    padding: 40px 80px;
+    text-align: center;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Buttons */
+.category-btn,
+.offer-btn,
+.about-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 25px;
+    background-color: #2f2f2f;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.category-btn:hover,
+.offer-btn:hover,
+.about-btn:hover {
+    background-color: black;
 }
 
 /* Footer */
+footer,
 .site-footer {
-    background-color: #111;
-    border-top: 2px solid #111;
-    padding: 48px 0;
+    background-color: #212529;
+    color: white;
     text-align: center;
-    font-size: 1.1rem;
+    padding: 30px 0;
+}
+
+/* About page banner */
+.about-banner {
+    min-height: 250px;
+    padding: 40px 20px;
+    background-image: url("about-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.about-banner h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.about-banner p {
+    font-size: 18px;
+}
+
+/* About us image and text */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 70px 10%;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border: 2px solid #333;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* Purpose and products */
+.info-section {
+    padding: 35px 10%;
+    text-align: center;
+}
+
+.info-section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.info-section p {
+    max-width: 900px;
+    margin: auto;
+    font-size: 17px;
+    line-height: 1.6;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+    padding: 20px 0;
 }
 
 .footer-content {
@@ -397,6 +193,207 @@ main {
     gap: 28px;
     flex-wrap: wrap;
 }
+
+/* Contact page banner */
+.contact-banner {
+    min-height: 250px;
+    padding: 40px 20px;
+    background-image: url("contact-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.contact-banner h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.contact-banner p {
+    font-size: 18px;
+}
+
+/* Feedback form */
+.contact-form-section {
+    padding: 50px 20px 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.feedback-form {
+    width: 100%;
+    max-width: 480px;
+    padding: 25px;
+    border: 2px solid #333;
+    border-radius: 6px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.feedback-form h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    width: 100%;
+    margin-bottom: 14px;
+    padding: 12px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.feedback-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.feedback-form button {
+    padding: 10px 35px;
+    border: none;
+    border-radius: 20px;
+    background-color: #2f2f2f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.feedback-form button:hover {
+    background-color: #000;
+}
+
+/* Contact cards */
+.contact-cards {
+    padding: 30px 8% 60px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.contact-card {
+    flex: 1;
+    min-height: 220px;
+    padding: 30px 20px;
+    border: 2px solid #333;
+    border-radius: 6px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.contact-card h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.map-link {
+    color: #2f2f2f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.map-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Style the tab */
+
+/* Collection banner for men and women pages */
+.collection-banner {
+    min-height: 250px;
+    padding: 40px 20px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.women-banner {
+    background-image: url("women-banner.jpg");
+}
+
+.men-banner {
+    background-image: url("men-banner.jpg");
+}
+
+.collection-banner h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.collection-banner p {
+    font-size: 18px;
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.products-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 45px;
+}
+
+.product-card {
+    text-align: center;
+}
+
 
 /* Responsive */
 @media (max-width: 900px) {
@@ -436,3 +433,10 @@ main {
         min-height: 130px;
     }
 }
+
+body.dark-mode {
+    background-color: #333333;
+    color: #f9f9f9;
+}
+body.dark-mode nav { background-color: #222222; }
+#theme-toggle { padding: 8px 16px; cursor: pointer; margin: 10px; }
