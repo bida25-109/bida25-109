@@ -282,8 +282,8 @@ footer,
     flex: 1;
     min-height: 220px;
     padding: 30px 20px;
-    border: 2px solid #333;
-    border-radius: 6px;
+    border: 2px none;
+    border-radius: none;
     text-align: center;
     background-color: #fff;
 }
@@ -432,6 +432,10 @@ footer,
     .page-banner {
         min-height: 130px;
     }
+}
+
+.sale-banner {
+    background-image: url("sale-banner.jpg");
 }
 
 body.dark-mode {
